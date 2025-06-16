@@ -85,34 +85,30 @@
   </form>
 
   <script>
-    const form = document.getElementById('applyForm');
+   const form = document.getElementById('applyForm');
+const scriptURL = 'https://script.google.com/macros/s/YOUR_DEPLOYED_WEB_APP_URL/exec';
 
-const scriptURL = 'https://script.google.com/macros/s/AKfycbx1_FG0FL9Zqt7jP70_1_MZauIr7z11pCbzZMIsh72guzVlHa-3dFvZR8BM1Zx1C7SA/exec'; // Replace with your Apps Script Web App URL
-
-form.addEventListener('submit', async (e) => {
+form.addEventListener('submit', e => {
   e.preventDefault();
 
   const formData = new FormData(form);
-  const data = Object.fromEntries(formData.entries());
 
-  try {
-    const response = await fetch(scriptURL, {
-      method: 'POST',
-      body: JSON.stringify(data),
-      headers: {
-        'Content-Type': 'application/json',
-      },
-    });
-
-    const result = await response.json();
-    alert(result.message);
-
-    form.reset(); // Optional: clear form after submission
-  } catch (error) {
-    console.error('Error!', error.message);
-    alert('Failed to submit. Please try again.');
-  }
+  fetch(scriptURL, {
+    method: 'POST',
+    body: formData // No 'Content-Type' header set manually!
+  })
+  .then(response => response.json())
+  .then(result => {
+    if (result.result === 'success') {
+      alert('Application submitted successfully!');
+      form.reset();
+    } else {
+      alert('Error submitting: ' + (result.error || 'Unknown error'));
+    }
+  })
+  .catch(error => alert('Fetch error: ' + error.message));
 });
+
 
   </script>
 </body>
