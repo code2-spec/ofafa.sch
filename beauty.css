@@ -1,0 +1,222 @@
+/*body{
+    background-image:url(kamile-cy\ \(1\).jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size:cover;
+    background-position:center;
+    color: gold;}
+.logo{
+    width: 140px;
+    height:140px;
+    border-radius:50px;
+}
+.destination{
+    text-align: right;
+}
+.h1{
+    color:rgb(133, 11, 31);
+}
+.p1{
+    background-color:purple;
+}
+.p2{
+     background-color:rgb(87, 36, 87);
+}
+
+.man{
+    width: 250px;
+    height:250px;
+    display:inline-block;
+}
+.mass{
+     width: 250px;
+    height:250px;
+    display:inline-block;
+}
+.ped{
+     width: 250px;
+    height:250px;
+    display:inline-block;
+}
+
+.div1{
+display:inline-block;
+ margin-left: 30px;
+ color:green;
+}
+.div2{
+display:inline-block;
+ margin-left: 30px;
+}
+.div3{
+display:inline-block;
+ margin-left: 30px;
+}
+.braid{
+ width: 250px;
+    height:250px;   
+}
+.assi{
+    width: 250px;
+    height:250px;
+    margin-left: 30px;
+
+}
+.div4{
+    display:inline-block;
+ margin-left: 30px;
+ margin-top:30px;
+}
+.div5{
+    display:inline-block;
+ margin-left: 30px;
+ margin-top:30px;
+}
+.dread{
+     width: 250px;
+    height:250px;
+    display:inline-block;
+    margin-top:30px;
+
+}
+.apply{
+    color:white;
+    border-style:double;
+    border-color: blue;
+    background-color:red;
+}*/
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    background-image: url("kamile-cy.jpg"); /* Fixed background path */
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    color: gold;
+}
+
+/* Header */
+header {
+    background-color: rgba(133, 11, 31, 0.9);
+    padding: 20px;
+}
+
+/* Navigation */
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    display: inline-block;
+    margin: 0 15px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+/* Dropdown */
+.dropdown {
+    position: relative;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: rgba(75, 125, 145, 0.8);
+    padding: 10px;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Sections */
+.intro, .course-levels, .services {
+    padding: 20px;
+    background-color: rgba(87, 36, 87, 0.8);
+    border-radius: 8px;
+    margin: 15px auto;
+    max-width: 80%;
+}
+
+/* Services Section */
+.service {
+    display: inline-block;
+    width: 250px;
+    padding: 10px;
+    background-color: rgba(50, 82, 0, 0.8);
+    border-radius: 8px;
+    margin: 10px;
+}
+
+.service img {
+    width: 250px;
+    height: 250px;
+    border-radius: 10px;
+}
+
+/* Apply Button */
+.apply {
+    display: inline-block;
+    color: white;
+    border: 2px double blue;
+    background-color: red;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: 0.3s;
+    animation: flicker 1s infinite;
+}
+
+@keyframes flicker {
+    0% { opacity: 1; }
+    50% { opacity: 0.5; }
+    100% { opacity: 1; }
+}
+
+.apply:hover {
+    background-color: rgb(200, 0, 0);
+    transform: scale(1.1);
+}
+
+/* Footer */
+footer {
+    background-color: rgba(133, 11, 31, 0.9);
+    padding: 15px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .service {
+        width: 90%;
+        margin: auto;
+    }
+
+    .service img {
+        width: 100%;
+        height: auto;
+    }
+}
+.logo {
+    width: 80px; /* Adjusted smaller size */
+    height: 80px;
+    border-radius: 50%; /* Keeps it rounded */
+    margin-top: 5px;
+    margin-left: 10px;
+}

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registered Students</title>
+    <link rel="stylesheet" href="storage.css">
+    <script src="storage.js" defer></script>
+</head>
+<body>
+
+    <header>
+        <h1>Registered Students</h1>
+    </header>
+
+    <main>
+        <!-- Table to Display Registered Students -->
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>First Name</th>
+                    <th>Email</th>
+                    <th>Phone</th>
+                    <th>Course</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody id="studentList">
+                <!-- Data will be populated dynamically -->
+            </tbody>
+        </table>
+
+        <button onclick="clearAllStudents()">Clear All Data</button>
+
+        <a href="home.html">Go Back to Home</a>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Ofafa Vocational Training Centre. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>

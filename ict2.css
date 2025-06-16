@@ -1,0 +1,258 @@
+ /*body {
+    background-image:url(images\ \(49\).jpeg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size:cover;
+    color:tomato;
+}
+h1{
+    margin-left: 30px;
+}
+    .logo{
+        font-size: 20px;
+    width:150px;
+    cursor: pointer;
+    margin-top:2px;
+ height:100px;
+ margin-left: 20px;
+ border-radius:360px;
+
+    }
+
+.img1 {
+    font-size: 20px;
+    width:400px;
+    cursor: pointer;
+ height:250px;
+ margin-left: 100;
+}
+.networking{
+    font-size: 20px;
+    width:360px;
+    cursor: pointer;
+ height:250px;
+ 
+}
+.list{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: small;
+    color: crimson;
+}
+.image2{
+     font-size: 20px;
+    width:400px;
+    cursor: pointer;
+    margin-top:20px;
+ height:250px;
+}
+.package1{
+    background-color: rgb(49, 49, 165);
+     font-size: 20px;
+    width:400px;
+    cursor: pointer;
+    margin-top:20px;
+ height:250px;
+ margin-left: 10px;
+ border-radius: 180px;
+ 
+}
+.div2{
+     
+    width:300px;
+    display:inline-block;
+    margin-left: 130px;
+    color: azure;
+    font-size: medium;
+    
+}
+.div3{
+    width:300px;
+    display:inline-block;
+    margin-left: 180px;
+    margin-bottom: 180;
+}
+.div1{
+     width:300px;
+    display:inline-block;
+    height:250px;
+ margin-left:auto;
+}
+.div4{
+     width:300px;
+    display:inline-block;
+    height:250px;
+ margin-left: 30px;
+ margin-bottom: 80px;
+}
+.p1{
+    background-color: black;
+    margin-left: 30px;
+}
+.fath{
+     width:300px;
+    display:inline-block;
+    height:250px;
+ margin-left: 30px;
+ margin-bottom: 80px;
+ margin-left: 8em;
+ margin-top: 30px;
+ border-radius: 360px;
+}
+.first1{
+    display:inline-block;
+
+}
+.firt2{
+    display:inline-block;
+}
+.apply{
+    color:white;
+    border-style:double;
+    border-color: blue;
+    background-color:red;
+}*/
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    background-image: url("images/49.jpeg"); /* Fixed background path */
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    color: white;
+}
+
+/* Header */
+header {
+    background-color: rgb(65, 113, 129);
+    padding: 20px;
+}
+
+/* Navigation */
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    display: inline-block;
+    margin: 0 15px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+/* Dropdown */
+.dropdown {
+    position: relative;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: rgb(75, 125, 145);
+    padding: 10px;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown-content li {
+    padding: 8px 0;
+}
+
+/* Course Sections */
+.intro, .topics {
+    padding: 20px;
+    background-color: rgba(55, 95, 109, 0.8);
+    border-radius: 8px;
+    margin: 15px auto;
+    max-width: 80%;
+}
+
+/* Topic Section */
+.topic {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    background-color: rgba(50, 82, 0, 0.8);
+    padding: 15px;
+    border-radius: 8px;
+    margin: 10px auto;
+    max-width: 80%;
+}
+
+.topic img {
+    width: 200px;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* Apply Button */
+.apply {
+    display: inline-block;
+    color: white;
+    border: 2px double blue;
+    background-color: red;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: 0.3s;
+    animation: flicker 1s infinite;
+}
+
+/* Flickering Effect */
+@keyframes flicker {
+    0% { opacity: 1; }
+    50% { opacity: 0.5; }
+    100% { opacity: 1; }
+}
+
+.apply:hover {
+    background-color: rgb(200, 0, 0);
+    transform: scale(1.1);
+}
+
+/* Footer */
+footer {
+    background-color: rgb(65, 113, 129);
+    padding: 15px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .topic {
+        flex-direction: column;
+    }
+
+    .topic img {
+        width: 100%;
+        height: auto;
+    }
+}
+.logo {
+    width: 80px; /* Adjusted smaller size */
+    height: 80px;
+    border-radius: 50%; /* Keeps it rounded */
+    margin-top: 5px;
+    margin-left: 10px;
+}
+
