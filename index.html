@@ -84,6 +84,36 @@
     <button type="submit">Submit Application</button>
   </form>
 
-  <script src="form.js"></script>
+  <script>
+    const form = document.getElementById('applyForm');
+
+const scriptURL = 'YOUR_WEB_APP_URL'; // Replace with your Apps Script Web App URL
+
+form.addEventListener('submit', async (e) => {
+  e.preventDefault();
+
+  const formData = new FormData(form);
+  const data = Object.fromEntries(formData.entries());
+
+  try {
+    const response = await fetch(scriptURL, {
+      method: 'POST',
+      body: JSON.stringify(data),
+      headers: {
+        'Content-Type': 'application/json',
+      },
+    });
+
+    const result = await response.json();
+    alert(result.message);
+
+    form.reset(); // Optional: clear form after submission
+  } catch (error) {
+    console.error('Error!', error.message);
+    alert('Failed to submit. Please try again.');
+  }
+});
+
+  </script>
 </body>
 </html>
